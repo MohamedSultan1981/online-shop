@@ -129,5 +129,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 CART_SESSION_ID = 'cart'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' #is default if not specified
+# Email server configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'zickler2004@gmail.com'
+EMAIL_HOST_PASSWORD = 'ldddhrzpaplnenkh'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
