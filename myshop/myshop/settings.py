@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -129,7 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 CART_SESSION_ID = 'cart'
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' #is default if not specified
 # Email server configuration
 EMAIL_HOST = 'smtp.gmail.com'
@@ -137,5 +138,9 @@ EMAIL_HOST_USER = 'zickler2004@gmail.com'
 EMAIL_HOST_PASSWORD = 'ldddhrzpaplnenkh'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51M2AmUHBj3mgNjBSKWViqYZFyghPRg08hmfWaIQPeVgRcv2bSw8SgGxyGcVk0CGm9Z3REjRdCsNIF5Mopli2NiNv008KEd05nq' # Publishable key
+STRIPE_SECRET_KEY = 'sk_test_51M2AmUHBj3mgNjBS9NAN0KcICUJ32TGxLLRCwPmNqYWEPsTOBWyFA5RyhGyFSapvFTGvOsmAXkNnU9Ssh34BpMe400h9HfoXBG' # Secret key
+STRIPE_API_VERSION = '2022-08-01'
+STRIPE_WEBHOOK_SECRET = 'whsec_cbd16d9d83f6bdfd8d560b16458a6ff932a5320de4cf50bc98150c0c70b5d611'
 
 
